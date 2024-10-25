@@ -36,6 +36,7 @@ import datetime
 
 import argparse
 
+
 import cvae
 import data_utils
 
@@ -44,6 +45,8 @@ NUM_TO_GENERATE = NUM_LABELS * 500
 
 
 def parse_args():
+    parser = argparse.ArgumentParser(description="CADD-CVAE Training Arguments")
+
     parser.add_argument('--results_path', type=str, default='results_cvae',
                         help='File path of output images')
 
