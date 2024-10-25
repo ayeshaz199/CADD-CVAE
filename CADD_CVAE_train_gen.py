@@ -44,6 +44,9 @@ NUM_TO_GENERATE = NUM_LABELS * 500
 
 
 def parse_args():
+
+     parser = argparse.ArgumentParser(description="CADD-CVAE Training Arguments")  # Added this line to initialize parser
+
     parser.add_argument('--results_path', type=str, default='results_cvae',
                         help='File path of output images')
 
@@ -55,6 +58,7 @@ def parse_args():
     parser.add_argument('--batch_size', type=int, default=128, help='Batch size')
 
     return check_args(parser.parse_args())
+ 
 
 
 """checking arguments"""
